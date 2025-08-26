@@ -1,3 +1,4 @@
+import { Navbar } from "../components/Navbar";
 import { ThemeToggle } from "../components/ThemeToggle";
 import {StartBackground} from "@/components/StartBackground"
 
@@ -10,6 +11,7 @@ export const Home = () => {
             <StartBackground />
 
             {/* Navbar */}
+            <Navbar />
 
             {/* Main Content */}
 
