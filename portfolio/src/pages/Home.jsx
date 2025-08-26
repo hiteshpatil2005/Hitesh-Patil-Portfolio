@@ -1,4 +1,5 @@
 import { Navbar } from "../components/Navbar";
+import { HeroSection } from "../components/HeroSection";
 import { ThemeToggle } from "../components/ThemeToggle";
 import {StartBackground} from "@/components/StartBackground"
 
@@ -14,6 +15,9 @@ export const Home = () => {
             <Navbar />
 
             {/* Main Content */}
+            <main>
+                <HeroSection />
+            </main>
 
             {/* Footer */}
         </div>
