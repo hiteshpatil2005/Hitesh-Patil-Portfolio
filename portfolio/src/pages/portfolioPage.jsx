@@ -1,6 +1,7 @@
 import { AboutSection } from "../components/AboutSection";
 import { StartBackground } from "@/components/StartBackground";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { SkillsSection } from "../components/SkillsSection";
 
 // add other sections as you build them
 
@@ -13,8 +14,7 @@ export const Portfolio = () => {
       <StartBackground />
       <main>
         <AboutSection />
-        {/* Add more sections */}
-        {/* <ProjectsSection /> */}
+        <SkillsSection />
       </main>
     </div>
   );

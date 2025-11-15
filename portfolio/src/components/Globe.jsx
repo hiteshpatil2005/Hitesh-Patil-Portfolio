@@ -117,7 +117,7 @@ const Globe = () => {
   useEffect(() => {
     let progress = 0;
     const animateEntrance = () => {
-      progress += 0.01;
+      progress += 0.02;
       setScale(Math.min(progress, 1));
       setOpacity(Math.min(progress, 1));
       if (progress < 1) requestAnimationFrame(animateEntrance);
