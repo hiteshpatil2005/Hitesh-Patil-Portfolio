@@ -52,14 +52,14 @@
 
   @keyframes meteor {
     0% { 
-      transform: rotate(215deg) translateX(0);
+      transform: rotate(223deg) translateX(0);
       opacity: 1; 
     }
-    70% {
+    90% {
       opacity: 1;
     }
     100% { 
-      transform: rotate(215deg) translateX(-500px);
+      transform: rotate(223deg) translateX(-600px);
       opacity: 0; 
     }
   }
@@ -84,7 +84,7 @@
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 272 100% 72%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;

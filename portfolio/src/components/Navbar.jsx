@@ -29,7 +29,7 @@ export const Navbar = () => {
         )}
         >
             <div className="container flex items-center justify-between">
-                <a className="text-xl font-bold text-primary flex items-center"
+                <a className="text-2xl font-bold text-primary flex items-center"
                     href="#hero"
                 >
                     <span className="relative z-10">
@@ -40,9 +40,9 @@ export const Navbar = () => {
 
                 {/* desktop nav */}
 
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden md:flex space-x-8 text-xl">
                     {navItems.map((item, key) => (
-                        <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                        <a key={key} href={item.href} className="text-foreground hover:text-primary transition-colors duration-300">
                             {item.name}
                         </a>
                     ))}
