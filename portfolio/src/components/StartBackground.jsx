@@ -22,7 +22,7 @@ export const StartBackground = () => {
 
     const generateStars = () => {
         const numberOfStars = Math.floor(
-            (window.innerWidth * window.innerHeight) / 10000 
+            (window.innerWidth * window.innerHeight)*3 / 10000 
         );
 
         const newStars = [];
@@ -48,7 +48,7 @@ export const StartBackground = () => {
         for (let i = 0; i < numberOfMeteors; i++) {
             newMeteors.push({
                 id: i,
-                size: Math.random() * 2 + 1,
+                size: Math.random() * 3 + 1,
                 x: Math.random() * 100,
                 y: Math.random() * 20,
                 delay: Math.random() * 15,
