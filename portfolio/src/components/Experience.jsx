@@ -5,19 +5,6 @@ import AnimatedContent from "./AnimatedContent";
 const journeyData = {
   experience: [
     {
-      title: "Google Developer Club",
-      period: "2024 - Present",
-      role: "Competitive Programmer",
-      description:
-        "Actively participating in algorithmic problem-solving, organizing contests, and contributing to the developer community by sharing valuable resources.",
-      achievements: [
-        "Hosted 10+ weekly contests with solution repositories",
-        "Created a comprehensive DSA resource repository available on my GitHub",
-      ],
-      link: "https://gdg.community.dev/",
-      icon: "briefcase",
-    },
-    {
       title: "Pariwar Agro Android Application",
       period: "2025",
       role: "Freelancing",
@@ -28,7 +15,20 @@ const journeyData = {
         "Explore the App Deployment process on Play Store",
         "Gained Experience in Android Development",
       ],
-      link: "https://example.com",
+      link: "https://play.google.com/store/apps/details?id=com.pariwar.pariwaragro&pcampaignid=web_share",
+      icon: "phone",
+    },
+    {
+      title: "Leadership Role",
+      period: "2025",
+      role: "Leader",
+      description:
+        "Led a team as a Vice Cadet Captain, managing discipline, and coordinating events to foster teamwork and leadership skills among peers.",
+      achievements: [
+        "Gained Experience as a Leader",
+        "Learned Team Management Skills",
+        "Manage Situations Successfully",
+      ],
       icon: "phone",
     },
   ],
@@ -78,8 +78,22 @@ const journeyData = {
 
   activities: [
     {
-      title: "DigiDonor Hackathon",
-      period: "2023",
+      title: "Ranking Top 10% on Try HackMe",
+      period: "2025",
+      role: "Cyber Security Enthusiast",
+      description:
+        "Completed multiple hands-on cybersecurity challenges on TryHackMe, ranking in the top 10% of participants and demonstrating strong practical skills in penetration testing, network security, and ethical hacking.",
+      achievements: [
+        "Ranked in the top 10% globally on TryHackMe for consistent performance",
+        "Completed over 50 hands-on cybersecurity labs and challenges.",
+        "Gained practical expertise in penetration testing, network security, and ethical hacking techniques.",
+      ],
+      link: "https://tryhackme.com/p/hiteshpatil0205",
+      icon: "trophy",
+    },
+    {
+      title: "Nasa Space App Hackathon",
+      period: "2024",
       role: "Team Lead",
       description:
         "Built a comprehensive healthcare system connecting blood donors with recipients in real-time.",
@@ -88,20 +102,7 @@ const journeyData = {
         "Implemented real-time matching algorithm",
         "Deployed system used by 500+ users",
       ],
-      link: "https://devpost.com",
-      icon: "trophy",
-    },
-    {
-      title: "Research Publication",
-      period: "2023",
-      role: "Co-Author",
-      description:
-        "Explored cloud computing security and privacy mechanisms for modern distributed systems.",
-      achievements: [
-        "Published in international journal",
-        "Presented at tech conference",
-        "Cited by multiple research papers",
-      ],
+      link: "https://drive.google.com/file/d/1YIPQi1R4AZ__3dK9Z6QwLq6gFJtJxggc/view?usp=sharing",
       icon: "trophy",
     },
   ],

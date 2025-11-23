@@ -19,33 +19,50 @@ import {
     VscodeOriginal,
     AndroidstudioOriginal,
     MysqlOriginal,
+    PhpOriginal,
+    MarkdownOriginal,
+    COriginal,
+    JavaOriginal,
+    KotlinOriginal,
+    XmlOriginal,
+    IntellijOriginal,
+    KalilinuxOriginal
 } from "devicons-react";
 
 const skills = [
+    // Programming Languages
+    { name: "C", level: 80, category: "programming Languages", icon: <COriginal size={40} /> },
+    { name: "Java", level: 85, category: "programming Languages", icon: <JavaOriginal size={40} /> },
+    { name: "Kotlin", level: 60, category: "programming Languages", icon: <KotlinOriginal size={40} /> },
     // Frontend
     { name: "HTML", level: 95, category: "frontend", icon: <Html5Original size={40} /> },
-    { name: "CSS", level: 95, category: "frontend", icon: <Css3Original size={40} /> },
-    { name: "Javascript", level: 70, category: "frontend", icon: <JavascriptOriginal size={40} /> },
-    { name: "ReactJS", level: 85, category: "frontend", icon: <ReactOriginal size={40} /> },
-    { name: "Tailwind CSS", level: 95, category: "frontend", icon: <TailwindcssOriginal size={40} /> },
+    { name: "CSS", level: 90, category: "frontend", icon: <Css3Original size={40} /> },
+    { name: "Javascript", level: 60, category: "frontend", icon: <JavascriptOriginal size={40} /> },
+    { name: "ReactJS", level: 60, category: "frontend", icon: <ReactOriginal size={40} /> },
+    { name: "Tailwind CSS", level: 85, category: "frontend", icon: <TailwindcssOriginal size={40} /> },
+    { name: "XML", level: 70, category: "frontend", icon: <XmlOriginal size={40} /> },
 
     // Backend
-    { name: "Node.js", level: 95, category: "backend", icon: <NodejsOriginal size={40} /> },
-    { name: "Express.js", level: 90, category: "backend", icon: <ExpressOriginal size={40} style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
-    { name: "MongoDB", level: 85, category: "backend", icon: <MongodbOriginal size={40} /> },
-    { name: "Firebase", level: 85, category: "backend", icon: <FirebaseOriginal size={40} /> },
-    { name: "SQL", level: 80, category: "backend", icon: <MysqlOriginal size={40} /> },
-    { name: "Python", level: 75, category: "backend", icon: <PythonOriginal size={40} /> },
+    { name: "Node.js", level: 55, category: "backend", icon: <NodejsOriginal size={40} /> },
+    { name: "Express.js", level: 40, category: "backend", icon: <ExpressOriginal size={40} style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
+    { name: "PHP", level: 65, category: "backend", icon: <PhpOriginal size={40} /> },
+    { name: "MongoDB", level: 65, category: "backend", icon: <MongodbOriginal size={40} /> },
+    { name: "Firebase", level: 75, category: "backend", icon: <FirebaseOriginal size={40} /> },
+    { name: "SQL", level: 85, category: "backend", icon: <MysqlOriginal size={40} /> },
+    { name: "Python", level: 75, category: "programming Languages", icon: <PythonOriginal size={40} /> },
 
     // Tools
     { name: "Git", level: 70, category: "tools", icon: <GitOriginal size={40} /> },
     { name: "Github", level: 95, category: "tools", icon: <GithubOriginal size={40} style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
-    { name: "Jira", level: 95, category: "tools", icon: <JiraOriginal size={40} /> },
+    { name: "Jira", level: 65, category: "tools", icon: <JiraOriginal size={40} /> },
     { name: "VS Code", level: 95, category: "tools", icon: <VscodeOriginal size={40} /> },
     { name: "Android Studio", level: 85, category: "tools", icon: <AndroidstudioOriginal size={40} /> },
+    { name: "IntelliJ IDEA", level: 80, category: "tools", icon: <IntellijOriginal size={40} /> },
+    { name: "Markdown", level: 75, category: "all", icon: <MarkdownOriginal size={40} /> },
+    { name: "Kali Linux", level: 60, category: "tools", icon: <KalilinuxOriginal size={40} /> },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all","programming Languages", "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
