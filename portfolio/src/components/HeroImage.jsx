@@ -27,7 +27,7 @@ const HeroImage = ({ src, alt }) => {
       <div className="absolute inset-0 rounded-full ring-2 ring-purple-400/40 animate-pulse"></div>
 
       {/* Soft Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/10"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/10"></div>
     </div>
   );
 };

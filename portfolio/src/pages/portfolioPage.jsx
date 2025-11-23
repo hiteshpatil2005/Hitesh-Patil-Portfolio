@@ -5,6 +5,7 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import {Footer} from "../components/Footer";
+import Experience from "../components/experience";
 
 // add other sections as you build them
 
@@ -19,6 +20,7 @@ export const Portfolio = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <Experience />
         <ContactSection />
       </main>
 

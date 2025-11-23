@@ -26,7 +26,7 @@ export const ContactSection = () => {
         <section
             id="contact"
             className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-6xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     Get In <span className="text-primary"> Touch </span>
                 </h2>
@@ -37,7 +37,7 @@ export const ContactSection = () => {
                     <div className="space-y-8">
                         <h3 className="text-2xl font-semibold mb-6"> Contact Information</h3>
                         <div className="space-y-6 justify-center">
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-start space-x-4 justify-center">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Mail className="h-6 w-6 text-primary" />{" "}
                                 </div>
@@ -46,7 +46,7 @@ export const ContactSection = () => {
                                     <a href="mailto:hiteshpatil0205@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">hiteshpatil0205@gmail.com</a>
                                 </div>
                             </div>
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-start space-x-9 justify-center">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <Phone className="h-6 w-6 text-primary" />{" "}
                                 </div>
@@ -55,7 +55,7 @@ export const ContactSection = () => {
                                     <a href="tel:+918605890513" className="text-muted-foreground hover:text-primary transition-colors">+91 8605890513 ( India )</a>
                                 </div>
                             </div>
-                            <div className="flex items-start space-x-4">
+                            <div className="flex items-start space-x-4 justify-center">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <MapPin className="h-6 w-6 text-primary" />{" "}
                                 </div>
@@ -69,18 +69,18 @@ export const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium mb-4">Connect With Me</h4>
                             <div className="flex space-x-4 justify-center">
-                                <a href="" target="_blank">
-                                    <Github />
-                                </a>
-                                <a href="" target="_blank">
-                                    <Linkedin />
-                                </a>
-                                <a href="" target="_blank">
-                                    <Twitter />
-                                </a>
-                                <a href="" target="_blank">
-                                    <Facebook />
-                                </a>
+                                <a href="https://github.com/hiteshpatil2005" target="_blank" className='p-3 rounded-full bg-primary/80 hover:bg-primary/60 transition-colors duration-300'>
+                                <Github />
+                            </a>
+                            <a href="https://www.linkedin.com/in/hiteshpatil2005/" target="_blank" className='p-3 rounded-full bg-primary/80 hover:bg-primary/60 transition-colors duration-300'>
+                                <Linkedin />
+                            </a>
+                            <a href="https://x.com/hiteshpatil2005" target="_blank" className='p-3 rounded-full bg-primary/80 hover:bg-primary/60 transition-colors duration-300'>
+                                <Twitter />
+                            </a>
+                            <a href="https://www.facebook.com/hiteshpatil2005" target="_blank" className='p-3 rounded-full bg-primary/80 hover:bg-primary/60 transition-colors duration-300'>
+                                <Facebook />
+                            </a>
                             </div>
                         </div>
                     </div>
