@@ -4,6 +4,7 @@ import { NotFound } from "./pages/NotFound"
 import { Navbar } from "./components/Navbar";
 import { Portfolio } from "./pages/portfolioPage";
 import { Toaster } from "./components/ui/toaster";
+import AchievementsPage from "./components/Achievements";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
         </Routes>
       
     </>

@@ -180,7 +180,7 @@
 .glow-effect {
   background: radial-gradient(
     circle at var(--x, 0px) var(--y, 0px),
-    rgba(175, 89, 255, 0.35),  /* LIGHTER glow center */
+    rgba(167, 74, 255, 0.393),  /* LIGHTER glow center */
     rgba(122, 29, 210, 0.169),  /* soft transition */
     transparent 85%           /* wider + softer fade */
   );

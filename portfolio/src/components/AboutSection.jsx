@@ -55,7 +55,7 @@ export const AboutSection = () => {
   return (
     <section id="about" className="pt-24 px-4 relative">
       <div className="container max-w-9xl py-12 space-y-16">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 ">
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-12 ">
           {/* LEFT TEXT SECTION */}
           <motion.div
             className="space-y-6"
@@ -73,7 +73,7 @@ export const AboutSection = () => {
 
             <motion.p
               variants={fadeUp}
-              className="text-muted-foreground text-xl"
+              className="text-muted-foreground text-xl text-left"
             >
               I am a Software Engineering student driven by a passion for
               creating digital solutions that genuinely make a difference. I love
@@ -83,7 +83,7 @@ export const AboutSection = () => {
 
             <motion.p
               variants={fadeUp}
-              className="text-muted-foreground text-xl"
+              className="text-muted-foreground text-xl text-left"
             >
               My work spans across Web Development, Android Development, AI-ML,
               and Cyber Security, where I focus on building scalable, reliable,
@@ -97,7 +97,7 @@ export const AboutSection = () => {
               variants={fadeUp}
               className="gradient-border px-6 py-4 card-hover border-l-4 border-l-primary"
             >
-              <p className="text-muted-foreground italic text-xl font-semibold text-blue-200">
+              <p className="text-muted-foreground italic text-lg font-semibold text-blue-200">
                 Every day, I push myself to learn more, build better, and go
                 beyond what I already know turning complex ideas into elegant
                 solutions

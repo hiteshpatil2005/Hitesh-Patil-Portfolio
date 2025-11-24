@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { cn } from "@/libs/utils";
+import { motion } from "framer-motion";
 
-// ⭐ Import icons from devicons-react
 import {
     Html5Original,
     Css3Original,
@@ -29,12 +29,12 @@ import {
     KalilinuxOriginal
 } from "devicons-react";
 
+// Skill data same...
 const skills = [
-    // Programming Languages
     { name: "C", level: 80, category: "programming Languages", icon: <COriginal size={40} /> },
     { name: "Java", level: 85, category: "programming Languages", icon: <JavaOriginal size={40} /> },
     { name: "Kotlin", level: 60, category: "programming Languages", icon: <KotlinOriginal size={40} /> },
-    // Frontend
+
     { name: "HTML", level: 95, category: "frontend", icon: <Html5Original size={40} /> },
     { name: "CSS", level: 90, category: "frontend", icon: <Css3Original size={40} /> },
     { name: "Javascript", level: 60, category: "frontend", icon: <JavascriptOriginal size={40} /> },
@@ -42,18 +42,20 @@ const skills = [
     { name: "Tailwind CSS", level: 85, category: "frontend", icon: <TailwindcssOriginal size={40} /> },
     { name: "XML", level: 70, category: "frontend", icon: <XmlOriginal size={40} /> },
 
-    // Backend
     { name: "Node.js", level: 55, category: "backend", icon: <NodejsOriginal size={40} /> },
-    { name: "Express.js", level: 40, category: "backend", icon: <ExpressOriginal size={40} style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
+    { name: "Express.js", level: 40, category: "backend",
+      icon: <ExpressOriginal size={40}
+      style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
     { name: "PHP", level: 65, category: "backend", icon: <PhpOriginal size={40} /> },
     { name: "MongoDB", level: 65, category: "backend", icon: <MongodbOriginal size={40} /> },
     { name: "Firebase", level: 75, category: "backend", icon: <FirebaseOriginal size={40} /> },
     { name: "SQL", level: 85, category: "backend", icon: <MysqlOriginal size={40} /> },
     { name: "Python", level: 75, category: "programming Languages", icon: <PythonOriginal size={40} /> },
 
-    // Tools
     { name: "Git", level: 70, category: "tools", icon: <GitOriginal size={40} /> },
-    { name: "Github", level: 95, category: "tools", icon: <GithubOriginal size={40} style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
+    { name: "Github", level: 95, category: "tools",
+      icon: <GithubOriginal size={40}
+      style={{ filter: "brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(5000%) hue-rotate(240deg)" }} /> },
     { name: "Jira", level: 65, category: "tools", icon: <JiraOriginal size={40} /> },
     { name: "VS Code", level: 95, category: "tools", icon: <VscodeOriginal size={40} /> },
     { name: "Android Studio", level: 85, category: "tools", icon: <AndroidstudioOriginal size={40} /> },
@@ -62,7 +64,26 @@ const skills = [
     { name: "Kali Linux", level: 60, category: "tools", icon: <KalilinuxOriginal size={40} /> },
 ];
 
-const categories = ["all","programming Languages", "frontend", "backend", "tools"];
+const categories = ["all","programming Languages","frontend","backend","tools"];
+
+// Animation Variants
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.12,
+        }
+    }
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { 
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: "easeOut" }
+    }
+};
 
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
@@ -71,25 +92,29 @@ export const SkillsSection = () => {
         (skill) => activeCategory === "all" || skill.category === activeCategory
     );
 
-    // Mouse move glow logic
     const handleMouseMove = (e) => {
         const card = e.currentTarget;
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        card.style.setProperty("--x", `${x}px`);
-        card.style.setProperty("--y", `${y}px`);
+        card.style.setProperty("--x", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--y", `${e.clientY - rect.top}px`);
     };
 
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-9xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    My Skills & <span className="text-primary">Expertise</span>
-                </h2>
 
-                {/* Category Filter Buttons */}
+                {/* Title Animation */}
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl md:text-4xl font-bold mb-12 text-center"
+                >
+                    My Skills & <span className="text-primary">Expertise</span>
+                </motion.h2>
+
+                {/* Filters */}
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category, key) => (
                         <button
@@ -107,32 +132,28 @@ export const SkillsSection = () => {
                     ))}
                 </div>
 
-                {/* Skill Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {filteredSkills.map((skill, key) => (
-                        <div
-                            key={key}
+                {/* Scroll-Triggered Animated Grid */}
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
+                    {filteredSkills.map((skill, i) => (
+                        <motion.div
+                            key={i}
+                            variants={cardVariants}
                             className="glow-card bg-card p-6 rounded-lg shadow-xs relative"
                             onMouseMove={handleMouseMove}
-                            style={{ border: "none" }}
                         >
-                            {/* Glow layer */}
-                            <div
-                                className="glow-effect"
-                                style={{
-                                    position: "absolute",
-                                    inset: 0,
-                                    pointerEvents: "none",
-                                }}
-                            ></div>
+                            <div className="glow-effect absolute inset-0 pointer-events-none"></div>
 
-                            {/* Icon + Name */}
                             <div className="flex items-center gap-3 mb-4">
                                 {skill.icon}
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
                             </div>
 
-                            {/* Progress bar */}
                             <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                                 <div
                                     className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
@@ -145,9 +166,9 @@ export const SkillsSection = () => {
                                     {skill.level}%
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

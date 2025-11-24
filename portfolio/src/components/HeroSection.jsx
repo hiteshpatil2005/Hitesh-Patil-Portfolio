@@ -21,10 +21,10 @@ export const HeroSection = () => {
             Empowering digital journeys through elegant code, seamless architecture, and innovative Real World Solutions !!
           </p>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+          <div className="pt-4 text-xl opacity-0 animate-fade-in-delay-4">
             <button
               onClick={() => navigate("/portfolio")}
-              className="cosmic-button"
+              className="bg-linear-to-br from-purple-400 to-purple-900 text-primary-foreground px-6 py-3 rounded-3xl font-semibold hover:bg-primary/90 transition"
             >
               View My Portfolio
             </button>

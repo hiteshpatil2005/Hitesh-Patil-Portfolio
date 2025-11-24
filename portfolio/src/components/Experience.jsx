@@ -96,11 +96,10 @@ const journeyData = {
       period: "2024",
       role: "Team Lead",
       description:
-        "Built a comprehensive healthcare system connecting blood donors with recipients in real-time.",
+        "Participated in the NASA Space App Hackathon to develop an innovative solution utilizing satellite data to address environmental challenges, showcasing skills in teamwork, problem-solving, and technical implementation.",
       achievements: [
-        "Won first prize in healthcare innovation category",
-        "Implemented real-time matching algorithm",
-        "Deployed system used by 500+ users",
+        "Developed innovative solution using satellite data",
+        "Enhanced teamwork and problem-solving skills",
       ],
       link: "https://drive.google.com/file/d/1YIPQi1R4AZ__3dK9Z6QwLq6gFJtJxggc/view?usp=sharing",
       icon: "trophy",
